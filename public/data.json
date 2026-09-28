@@ -13095,8 +13095,8 @@
   "_calendar": {
     "source": {
       "authority": "Montgomery County Public Schools",
-      "school": "Poolesville High School",
-      "url": "https://www.montgomeryschoolsmd.org/schools/poolesvillehs/calendar-index/",
+      "school": "Rocky Hill Middle School",
+      "url": "https://www.montgomeryschoolsmd.org/schools/rockyhillms/calendar-index/",
       "calendarUrl": "https://www.montgomeryschoolsmd.org/siteassets/district/calendar/2026/0775.26_2026-27_SchoolCalendar.pdf"
     },
     "checkedAt": "2026-09-05T19:54:46.193Z",
@@ -13539,7 +13539,7 @@
   },
   "_bellSource": {
     "title": "PHS Bell Schedules 23–24 (still linked by PHS on 2026-09-05)",
-    "url": "https://www.montgomeryschoolsmd.org/schools/poolesvillehs/about/schedules",
+    "url": "https://www.montgomeryschoolsmd.org/schools/rockyhillms/about/schedules",
     "documentUrl": "https://docs.google.com/document/d/1CuroPtuLpbRhBv_smS3HbzXw7DV014EB/edit"
   }
 }

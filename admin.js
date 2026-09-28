@@ -1912,7 +1912,7 @@
     return `
       <section class="admin-today-band" aria-label="Admin workspace">
         <div>
-          <span>Poolesville admin</span>
+          <span>Rocky Hill admin</span>
           <p>Draft, preview, and publish public schedule changes.</p>
         </div>
       </section>`;
@@ -2822,7 +2822,7 @@
       : 'Site paused for maintenance';
     const message = typeof status.message === 'string' && status.message.trim()
       ? status.message
-      : 'Poolesville Schedule is temporarily unavailable while we make an update. Please check back soon.';
+      : 'Rocky Hill Schedule is temporarily unavailable while we make an update. Please check back soon.';
     return {
       mode: status.mode === 'maintenance' ? 'maintenance' : 'live',
       title,
@@ -2834,12 +2834,12 @@
     {
       label: 'Maintenance',
       title: 'Site paused for maintenance',
-      message: 'Poolesville Schedule is temporarily unavailable while we make an update. Please check back soon.'
+      message: 'Rocky Hill Schedule is temporarily unavailable while we make an update. Please check back soon.'
     },
     {
       label: 'Security review',
       title: 'Security review in progress',
-      message: 'Poolesville Schedule is paused while we complete a security review. Please check back soon.'
+      message: 'Rocky Hill Schedule is paused while we complete a security review. Please check back soon.'
     },
     {
       label: 'Design update',
@@ -2849,12 +2849,12 @@
     {
       label: 'Bug fix',
       title: 'Fix in progress',
-      message: 'Poolesville Schedule is paused while we fix an issue. Please check back soon.'
+      message: 'Rocky Hill Schedule is paused while we fix an issue. Please check back soon.'
     },
     {
       label: 'Temporary outage',
       title: 'Temporary outage',
-      message: 'Poolesville Schedule is temporarily unavailable. We are working to restore access as quickly as possible.'
+      message: 'Rocky Hill Schedule is temporarily unavailable. We are working to restore access as quickly as possible.'
     }
   ];
 
@@ -5645,7 +5645,7 @@
               <label class="admin-field admin-field--flush"><div class="admin-field-row"><span>Mode</span></div><select class="admin-select" id="automation-maint-mode"><option value="maintenance">Maintenance</option><option value="live">Live</option></select></label>
               <label class="admin-field admin-field--flush"><div class="admin-field-row"><span>Title</span></div><input class="admin-input" id="automation-maint-title" value="Site paused for maintenance"></label>
             </div>
-            <label class="admin-field admin-field--flush"><div class="admin-field-row"><span>Message</span></div><textarea class="admin-textarea" id="automation-maint-message" rows="2">Poolesville Schedule is temporarily unavailable while we make an update. Please check back soon.</textarea></label>`,
+            <label class="admin-field admin-field--flush"><div class="admin-field-row"><span>Message</span></div><textarea class="admin-textarea" id="automation-maint-message" rows="2">Rocky Hill Schedule is temporarily unavailable while we make an update. Please check back soon.</textarea></label>`,
           announcementWindow: `
             <div class="admin-grid-3">
               <label class="admin-field admin-field--flush"><div class="admin-field-row"><span>Announcement</span></div><select class="admin-select" id="automation-ann-index">${announcementOptions || '<option value="0">Card 1</option>'}</select></label>
@@ -5883,7 +5883,7 @@
               <label class="admin-flow-field"><span>Mode</span><select class="admin-select" id="automation-maint-mode"><option value="maintenance">Maintenance</option><option value="live">Live</option></select></label>
               <label class="admin-flow-field"><span>Title</span><input class="admin-input" id="automation-maint-title" value="Site paused for maintenance"></label>
             </div>
-            <label class="admin-flow-field"><span>Message</span><textarea class="admin-textarea" id="automation-maint-message" rows="2">Poolesville Schedule is temporarily unavailable while we make an update. Please check back soon.</textarea></label>`,
+            <label class="admin-flow-field"><span>Message</span><textarea class="admin-textarea" id="automation-maint-message" rows="2">Rocky Hill Schedule is temporarily unavailable while we make an update. Please check back soon.</textarea></label>`,
           announcementWindow: `
             <div class="admin-flow-grid admin-flow-grid--three">
               <label class="admin-flow-field"><span>Card</span><select class="admin-select" id="automation-ann-index">${announcementOptions || '<option value="0">Card 1</option>'}</select></label>
@@ -7320,7 +7320,7 @@
       { type: 'triggerDateTime', kind: 'trigger', group: 'Triggers', label: 'Date and time', hint: 'Run once on a date', w: 320, h: 142, defaults: () => ({ date: todayISODate(), time: '08:00' }) },
       { type: 'triggerWeekday', kind: 'trigger', group: 'Triggers', label: 'Weekday repeat', hint: 'Run every selected weekday', w: 340, h: 154, defaults: () => ({ weekdays: [1,2,3,4,5], time: '08:00' }) },
       { type: 'setSchedule', kind: 'action', group: 'Actions', label: 'Set schedule', hint: 'Stage a planned schedule', w: 340, h: 154, defaults: () => ({ scheduleType: scheduleTypes[0] || 'Normal Schedule', date: todayISODate() }) },
-      { type: 'setMaintenance', kind: 'action', group: 'Actions', label: 'Set availability', hint: 'Stage live or maintenance', w: 360, h: 172, defaults: () => ({ mode: 'maintenance', title: 'Site paused for maintenance', message: 'Poolesville Schedule is temporarily unavailable while we make an update. Please check back soon.' }) },
+      { type: 'setMaintenance', kind: 'action', group: 'Actions', label: 'Set availability', hint: 'Stage live or maintenance', w: 360, h: 172, defaults: () => ({ mode: 'maintenance', title: 'Site paused for maintenance', message: 'Rocky Hill Schedule is temporarily unavailable while we make an update. Please check back soon.' }) },
       { type: 'announcementWindow', kind: 'action', group: 'Actions', label: 'Announcement timing', hint: 'Show, expire, or clear a card', w: 360, h: 160, defaults: () => ({ index: 0, mode: 'show', date: todayISODate() }) },
       { type: 'publishDraft', kind: 'action', group: 'Actions', label: 'Publish draft', hint: 'Publish staged draft', w: 280, h: 118, defaults: () => ({}) },
       { type: 'note', kind: 'utility', group: 'Utility', label: 'Note', hint: 'Document the workflow', w: 280, h: 112, defaults: () => ({ text: 'Add a note' }) }
@@ -9267,7 +9267,7 @@
   // Mode 'draft' → load page with ?_preview, then postMessage draft into it.
   // Mode 'live'  → load page without ?_preview so it fetches the published version.
   let _previewReady = false;
-  const TRUSTED_PUBLIC_PREVIEW_HOSTS = new Set(['poolesville.web.app']);
+  const TRUSTED_PUBLIC_PREVIEW_HOSTS = new Set(['rockyhill-ms.web.app']);
   function isLoopbackHostname(hostname) {
     return ['localhost', '127.0.0.1', '[::1]', '::1'].includes(hostname);
   }
@@ -9276,7 +9276,7 @@
     return TRUSTED_PUBLIC_PREVIEW_HOSTS.has(url.hostname) || (isLocal && isLoopbackHostname(url.hostname));
   }
   function publicPreviewBase() {
-    const candidates = [state.authConfig?.publicSiteUrl, isLocal ? location.origin : '', 'https://poolesville.web.app'];
+    const candidates = [state.authConfig?.publicSiteUrl, isLocal ? location.origin : '', 'https://rockyhill-ms.web.app'];
     for (const candidate of candidates) {
       try {
         const url = new URL(candidate);
@@ -9287,7 +9287,7 @@
         return url;
       } catch {}
     }
-    return new URL('https://poolesville.web.app/');
+    return new URL('https://rockyhill-ms.web.app/');
   }
   function previewPagePath() {
     return ({

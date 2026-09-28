@@ -1,11 +1,11 @@
 {
   "version": 1,
   "branding": {
-    "siteTitle": "Poolesville Web App | PHS Schedule",
-    "siteDescription": "Poolesville Web App shows today's PHS bell schedule, period times, lunch, announcements, and schedule changes for Poolesville High School.",
-    "logoSrc": "phs-logo-96.png",
-    "logoAlt": "PHS Logo",
-    "logoLink": "https://www.montgomeryschoolsmd.org/schools/poolesvillehs/",
+    "siteTitle": "Rocky Hill Web App | PHS Schedule",
+    "siteDescription": "Rocky Hill Web App shows today's PHS bell schedule, period times, lunch, announcements, and schedule changes for Rocky Hill Middle School.",
+    "logoSrc": "rhms-logo-96.png",
+    "logoAlt": "RHMS Wildcats Logo",
+    "logoLink": "https://www.montgomeryschoolsmd.org/schools/rockyhillms/",
     "favicon": "Icons8-Windows-8-Animals-Falcon.ico"
   },
   "nav": {
@@ -36,7 +36,7 @@
     "secondsAriaLabel": "seconds remaining"
   },
   "footer": {
-    "copyright": "Poolesville High School Student Portal",
+    "copyright": "Rocky Hill Middle School Student Portal",
     "feedbackUrl": "",
     "feedbackLabel": "",
     "supportEmail": "For all inquiries, support, or privacy requests, please contact us at emirbakir523@gmail.com or thegamerp929@gmail.com.",
@@ -77,7 +77,7 @@
       {
         "title": "Website Link",
         "bullets": [
-          "Use poolesville.web.app if available! MCPS approval pending for chromebooks. "
+          "Use rockyhill-ms.web.app if available! MCPS approval pending for chromebooks. "
         ]
       },
       {
@@ -153,7 +153,7 @@
   "siteStatus": {
     "mode": "live",
     "title": "Site paused for maintenance",
-    "message": "Poolesville Schedule is temporarily unavailable while we make an update. Please check back soon."
+    "message": "Rocky Hill Schedule is temporarily unavailable while we make an update. Please check back soon."
   },
   "scheduleOverride": null,
   "updatedAt": 1786753613217

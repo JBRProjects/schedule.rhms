@@ -1014,7 +1014,7 @@ function _updateNavActive(view = _siteView) {
 function _titleForView(view) {
   if (view === 'announcements') return 'Announcements - PHS';
   if (view === 'grades') return window.__SITE_SETTINGS__?.grades?.pageTitle || 'Grades - PHS';
-  return 'Poolesville Web App | PHS Schedule';
+  return 'Rocky Hill Web App | PHS Schedule';
 }
 
 function _applyViewTitle(view = _siteView) {
@@ -1411,7 +1411,7 @@ let _handwritingFontPromise = null;
 let _handwritingLibraryPromise = null;
 let _heroScriptDrawId = 0;
 let _heroScriptRequestId = 0;
-const HOMEPAGE_INTRO_COPY = 'poolesville.web';
+const HOMEPAGE_INTRO_COPY = 'rockyhill-ms.web';
 const HOMEPAGE_INTRO_SEEN_KEY = 'phs:homepage-intro-seen:v1';
 let _homepageIntroMotionReady = false;
 let _homepageIntroDataReady = false;

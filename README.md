@@ -1,10 +1,10 @@
 # PHS Student Portal
 
-A public student portal for Poolesville High School schedule information, announcements, privacy notes, and the embedded GradeViewer entrypoint. Made by Jay and Emir. 
+A public student portal for Rocky Hill Middle School schedule information, announcements, privacy notes, and the embedded GradeViewer entrypoint. Made by Jay and Emir. 
 
 ## Live Site
 
-- https://poolesville.web.app/
+- https://rockyhill-ms.web.app/
 
 ## Public Pages
 

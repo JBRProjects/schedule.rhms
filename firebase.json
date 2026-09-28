@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "poolesville",
+    "site": "rockyhill-ms",
     "public": "public",
     "ignore": [
       "firebase.json",
@@ -46,7 +46,7 @@
           },
           {
             "key": "Content-Security-Policy",
-            "value": "base-uri 'self'; object-src 'none'; frame-ancestors 'self' https://phs-grades-backend.onrender.com https://poolesville.web.app https://poolesville.firebaseapp.com https://schedulephs.web.app https://schedulephs.firebaseapp.com https://thegamerplayz929.github.io"
+            "value": "base-uri 'self'; object-src 'none'; frame-ancestors 'self' https://phs-grades-backend.onrender.com https://rockyhill-ms.web.app https://rockyhill-ms.firebaseapp.com https://schedulephs.web.app https://schedulephs.firebaseapp.com https://thegamerplayz929.github.io"
           }
         ]
       },

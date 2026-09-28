@@ -35,7 +35,7 @@
   const BACKEND_RETRY_MAX_MS = 60000;
   const TRUSTED_PREVIEW_PARENT_ORIGINS = new Set([
     'https://phs-grades-backend.onrender.com',
-    'https://poolesville.web.app'
+    'https://rockyhill-ms.web.app'
   ]);
   let backendRetryAt = 0;
   let backendBackoffMs = 0;
@@ -331,10 +331,10 @@
     const mark = document.createElement('a');
     mark.className = 'site-maintenance__mark';
     mark.href = 'index.html';
-    mark.setAttribute('aria-label', 'Poolesville schedule home');
+    mark.setAttribute('aria-label', 'Rocky Hill schedule home');
     const logo = document.createElement('img');
-    logo.src = 'phs-logo-96.png';
-    logo.alt = 'PHS Logo';
+    logo.src = 'rhms-logo-96.png';
+    logo.alt = 'RHMS Wildcats Logo';
     logo.width = 48;
     logo.height = 40;
     logo.decoding = 'async';
@@ -354,7 +354,7 @@
 
     const note = document.createElement('span');
     note.className = 'site-maintenance__note';
-    note.textContent = 'Poolesville Schedule';
+    note.textContent = 'Rocky Hill Schedule';
 
     panel.append(mark, title, message, note);
     document.body.appendChild(panel);
@@ -374,15 +374,15 @@
     const branding = settings?.branding || {};
     const mark = panel.querySelector('.site-maintenance__mark');
     const logo = mark?.querySelector('img');
-    const logoSrc = safeUrl(branding.logoSrc || 'phs-logo-96.png');
+    const logoSrc = safeUrl(branding.logoSrc || 'rhms-logo-96.png');
     const logoLink = safeUrl(branding.logoLink || 'index.html');
     if (logo && logoSrc) logo.setAttribute('src', logoSrc);
-    if (logo) logo.setAttribute('alt', cleanStatusText(branding.logoAlt, 'Poolesville Schedule logo', 120));
+    if (logo) logo.setAttribute('alt', cleanStatusText(branding.logoAlt, 'Rocky Hill Schedule logo', 120));
     if (mark && logoLink) mark.setAttribute('href', logoLink);
     renderStyledText(document.getElementById('site-maintenance-title'), 'maintenanceTitle', cleanStatusText(status.title, 'Site paused for maintenance', 120));
-    renderStyledText(document.getElementById('site-maintenance-message'), 'maintenanceMessage', cleanStatusText(status.message, 'Poolesville Schedule is temporarily unavailable while we make an update. Please check back soon.', 500));
+    renderStyledText(document.getElementById('site-maintenance-message'), 'maintenanceMessage', cleanStatusText(status.message, 'Rocky Hill Schedule is temporarily unavailable while we make an update. Please check back soon.', 500));
     const note = panel.querySelector('.site-maintenance__note');
-    if (note) note.textContent = cleanStatusText(settings?.branding?.siteTitle, 'Poolesville Schedule', 80);
+    if (note) note.textContent = cleanStatusText(settings?.branding?.siteTitle, 'Rocky Hill Schedule', 80);
   }
   function ensureDevtoolsPausePanel() {
     let panel = document.getElementById('devtools-pause');
@@ -398,8 +398,8 @@
     const mark = document.createElement('div');
     mark.className = 'site-maintenance__mark';
     const logo = document.createElement('img');
-    logo.src = 'phs-logo-96.png';
-    logo.alt = 'PHS Logo';
+    logo.src = 'rhms-logo-96.png';
+    logo.alt = 'RHMS Wildcats Logo';
     logo.width = 48;
     logo.height = 40;
     logo.decoding = 'async';
@@ -413,7 +413,7 @@
 
     const note = document.createElement('span');
     note.className = 'site-maintenance__note';
-    note.textContent = 'Poolesville Schedule';
+    note.textContent = 'Rocky Hill Schedule';
 
     panel.append(mark, title, message, note);
     document.body.appendChild(panel);
