@@ -1168,6 +1168,13 @@ async function _applyGradesFrameUrl(settings) {
   if (url) {
     if (!_urlsEqual(_gradesFrame.src, url)) _gradesFrame.src = url;
     _gradesFrameUrlLocked = true;
+    const fallback = document.getElementById('grades-open-external');
+    if (fallback) {
+      try {
+        const u = new URL(url, location.href);
+        fallback.href = u.origin + u.pathname;
+      } catch { fallback.href = url; }
+    }
   }
 }
 

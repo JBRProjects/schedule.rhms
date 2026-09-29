@@ -147,6 +147,7 @@
         style="background: transparent;">
       </iframe>
     </div>
+    <p class="grades-fallback">GradeViewer isn't loading here? <a id="grades-open-external" href="https://schedulephs.web.app/login" target="_blank" rel="noopener noreferrer">Open GradeViewer in a new tab</a></p>
   </section>
 
   <footer class="app-footer fade-up" style="--stagger: 3">
@@ -233,6 +234,13 @@
     if (url) {
       if (!urlsEqual(frame.src, url)) frame.src = url;
       frameUrlLocked = true;
+      const fallback = document.getElementById('grades-open-external');
+      if (fallback) {
+        try {
+          const u = new URL(url, location.href);
+          fallback.href = u.origin + u.pathname;
+        } catch { fallback.href = url; }
+      }
     }
   }
   document.addEventListener('site-settings:applied', e => applyIframeUrl(e.detail));

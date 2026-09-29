@@ -1153,6 +1153,19 @@ body.site-view-schedule.schedule-terminal-state .app-footer.fade-up {
   display: block;
 }
 
+.grades-fallback {
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.75;
+  margin: 12px 0 24px;
+}
+
+.grades-fallback a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .schedule-header {
   display: flex;
   justify-content: space-between;
